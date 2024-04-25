@@ -24,11 +24,27 @@ EKMM项目（外部知识多模态命名实体识别）专注于通过整合大�
 ## 🎇最近更新
 - 【2024.4.25】项目立项
 
+## 🎛项目结构
+
+
+
 
 ## 📌实现
+
+### Requirements
+
+```
+python==3.7.10
+
+```
 
 ### Data
 - Twitter15_Twitter17数据集
     - text部分：`/data/twitter2015` and `/data/twitter2017`
     - image部分：[下载链接](https://pan.baidu.com/s/15JN6BK9RBXyeLKZMV2vkCw?pwd=mner)
-    
+
+### OCR part
+- 在此我们使用OCR文本检测与识别模型得到图片中更多的信息，包括文字、位置等信息。
+- 在此使用通用领域中英都可以识别的的[读光-文字识别-行识别模型](https://www.modelscope.cn/models/iic/cv_convnextTiny_ocr-recognition-general_damo/summary)与[读光-文字检测-行检测模型](https://www.modelscope.cn/models/iic/cv_resnet18_ocr-detection-db-line-level_damo/summary)，具体请阅读[OCR部分](https://modelscope.cn/headlines/article/42)查阅。
+- 代码实现于`/code/ocr_module.py`
+
