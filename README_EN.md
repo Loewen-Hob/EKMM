@@ -25,7 +25,3 @@ The EKMM project optimizes multimodal named entity recognition through the follo
 
 ### 🎇Recent Updates
 - [April 25, 2024] Project initiation
-
----
-
-This translation provides a clear and professional overview suitable for your English README file.
