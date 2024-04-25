@@ -90,7 +90,7 @@ python==3.7.10
 - CMNER数据集
   - 介绍：基于社交媒体的中文 MNER 数据集。
   - text部分：`/data/cmner`
-  - image部分：[下载链接](链接：https://pan.baidu.com/s/1AFKSoSOT9xB1vobvaVkwCw?pwd=mner)
+  - image部分：[下载链接](https://pan.baidu.com/s/1AFKSoSOT9xB1vobvaVkwCw?pwd=mner)
 
 ### OCR part
 - 在此我们使用OCR文本检测与识别模型得到图片中更多的信息，包括文字、位置等信息。
