@@ -8,6 +8,16 @@
       简体中文| <a href="README_EN.md" >English</a>
   </div>
 
+## 🕔目录
+- [EKMM: 利用外部知识增强的多模态命名实体识别](#EKMM)
+  - [项目介绍](#项目介绍)
+  - [最近更新](#最近更新)
+  - [TODO](#TODO)
+  - [快速开始](#快速开始)
+  - [项目结构](#项目结构)
+  - [部署](#部署)
+  - [实现](#实现)
+
 ## 📠项目介绍
 **介绍**
 
@@ -90,7 +100,7 @@ python==3.7.10
 - CMNER数据集
   - 介绍：基于社交媒体的中文 MNER 数据集。
   - text部分：`/data/cmner`
-  - image部分：[下载链接](链接：https://pan.baidu.com/s/1AFKSoSOT9xB1vobvaVkwCw?pwd=mner)
+  - image部分：[下载链接](https://pan.baidu.com/s/1AFKSoSOT9xB1vobvaVkwCw?pwd=mner)
 
 ### OCR part
 - 在此我们使用OCR文本检测与识别模型得到图片中更多的信息，包括文字、位置等信息。
