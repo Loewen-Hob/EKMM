@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 <div align="center"> 
 
 ## EKMM: 利用外部知识增强的多模态命名实体识别
