@@ -8,6 +8,7 @@
       简体中文| <a href="README_EN.md" >English</a>
   </div>
 
+## 📠项目介绍
 **介绍**
 
 EKMM项目（外部知识多模态命名实体识别）专注于通过整合大型语言模型作为动态外部知识源，目标是在各种多模态场景中实现更准确和高效的实体识别。
@@ -16,18 +17,62 @@ EKMM项目（外部知识多模态命名实体识别）专注于通过整合大�
 
 多模态命名实体识别在理解复杂数据源中扮演着关键角色，特别是在社交媒体、新闻报道等领域。传统方法通常只依赖于有限的模态来识别实体，而忽视了外部大型知识库的潜力。此前也有项目尝试通过外部知识（wiki）增强实现任务，也很有效的打败了传统方法。基于前人的经验，我们提出了EKMM项目，EKMM通过融合文本和图像的数据，并结合外部模型生成的深层次知识，极大地提高了识别的准确性和鲁棒性。
 
+## 🎇最近更新
+- 【2024.4.25】项目立项
+- 【2024.4.25】整理了twitter数据集，完成了数据预处理
 
-## 快速体验
+## 🆙TODO
+
+- 项目立项
+- 数据整理与数据预处理
+    - 整理不同领域的多种数据集
+    - 完成数据预处理，包括数据清洗、数据增强
+- 构建图片描述生成数据集
+    - 使用统一的，效果好的模型，方便之后对不同LLM模型的效果进行对比。中英文数据集，可能会分别使用[BLIP-2](https://github.com/huggingface/blog/blob/main/blip-2.md), [Chinese-CLIP](https://github.com/OFA-Sys/Chinese-CLIP)
+- 外部知识库构建
+    - 构建外部知识库，包括实体、关系、事件等信息
+
+- 使用XTuner对LLM模型进行微调(暂定基于数据集语言情况选择模型)
+    - [llama3](https://github.com/InternLM/xtuner/tree/main/xtuner/configs/llama)
+    - [InternLM](https://huggingface.co/internlm)
+    - [Mixtral-8x7B](https://huggingface.co/mistralai)
+    - [Llama 2](https://huggingface.co/)
+    - [ChatGLM](https://huggingface.co/THUDM)
+    - [Qwen](https://huggingface.co/Qwen)
+    - [百川](https://huggingface.co/baichuan-inc) 
+    
+
+- 使用XTuner对VLM模型进行微调 
+    - [LLaVA-InternLM2-20B](https://huggingface.co/xtuner/llava-internlm2-20b)
+    - [llava-llama-3-8b](https://huggingface.co/xtuner/llava-llama-3-8b)
+
+- 讨论`基于image caption + Multimodel Similar Example + LLM` 与`only VLM`的效果比较，并分析原因。
+
+## 🔌快速体验
 - 请阅读[快速体验](docs/quick_start.md)查阅
 
 
-## 🎇最近更新
-- 【2024.4.25】项目立项
-
 ## 🎛项目结构
-
-
-
+```
+|-- README.md
+|-- README_EN.md
+|-- code
+|   `-- ocr_module.py
+|-- data
+|   `-- twitter
+|       |-- twitter2015
+|       |   |-- test.txt
+|       |   |-- train.txt
+|       |   `-- valid.txt
+|       `-- twitter2017
+|           |-- test.txt
+|           |-- train.txt
+|           `-- valid.txt
+|-- docs
+|   `-- quick_start.md
+`-- image
+```
+## 🔧部署
 
 ## 📌实现
 
@@ -35,7 +80,6 @@ EKMM项目（外部知识多模态命名实体识别）专注于通过整合大�
 
 ```
 python==3.7.10
-
 ```
 
 ### Data
