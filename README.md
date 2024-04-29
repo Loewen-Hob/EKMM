@@ -116,7 +116,8 @@ python==3.7.10
 - 代码实现于`/code/ocr_module.py`
 
 ### Image Caption part
-- 在此我们使用[BLIP-2](https://github.com/huggingface/blog/blob/main/blip-2.md)模型生成图片描述。
+- 在此我们使用[blip-image-captioning-large](https://huggingface.co/Salesforce/blip-image-captioning-large/tree/main)模型生成图片描述。
+- 图像描述部分只有英文结果，中文翻译使用[CSANMT](https://www.modelscope.cn/models/iic/nlp_csanmt_translation_en2zh_base/summary)。(可选)
 - 代码实现于`/code/image_caption.py`
 
 ### Generate ft data
