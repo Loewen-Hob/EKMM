@@ -1,4 +1,3 @@
-
 <div align="center"> 
 
 ## EKMM: 利用大模型增强多模态命名实体识别
@@ -6,6 +5,16 @@
 <div align="center">
       简体中文| <a href="README_EN.md" >English</a>
   </div>
+
+## 🕔目录
+- [EKMM: 利用外部知识增强的多模态命名实体识别](#EKMM)
+  - [项目介绍](#项目介绍)
+  - [最近更新](#最近更新)
+  - [TODO](#TODO)
+  - [快速体验](#快速体验)
+  - [项目结构](#项目结构)
+  - [部署](#部署)
+  - [实现](#实现)
 
 ## 📠项目介绍
 **介绍**
@@ -83,11 +92,15 @@ python==3.7.10
 
 ### Data
 - Twitter15_Twitter17数据集
-    - text部分：`/data/twitter2015` and `/data/twitter2017`
-    - image部分：[下载链接](https://pan.baidu.com/s/15JN6BK9RBXyeLKZMV2vkCw?pwd=mner)
+  - 介绍：基于社交媒体的英文数据集。
+  - text部分：`/data/twitter2015` and `/data/twitter2017`
+  - image部分：[下载链接](https://pan.baidu.com/s/15JN6BK9RBXyeLKZMV2vkCw?pwd=mner)
+- CMNER数据集
+  - 介绍：基于社交媒体的中文 MNER 数据集。
+  - text部分：`/data/cmner`
+  - image部分：[下载链接](https://pan.baidu.com/s/1AFKSoSOT9xB1vobvaVkwCw?pwd=mner)
 
 ### OCR part
 - 在此我们使用OCR文本检测与识别模型得到图片中更多的信息，包括文字、位置等信息。
 - 在此使用通用领域中英都可以识别的的[读光-文字识别-行识别模型](https://www.modelscope.cn/models/iic/cv_convnextTiny_ocr-recognition-general_damo/summary)与[读光-文字检测-行检测模型](https://www.modelscope.cn/models/iic/cv_resnet18_ocr-detection-db-line-level_damo/summary)，具体请阅读[OCR部分](https://modelscope.cn/headlines/article/42)查阅。
 - 代码实现于`/code/ocr_module.py`
-
