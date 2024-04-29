@@ -12,6 +12,7 @@
   - [最近更新](#最近更新)
   - [TODO](#TODO)
   - [快速体验](#快速体验)
+  - [得分](#得分)
   - [项目结构](#项目结构)
   - [部署](#部署)
   - [实现](#实现)
@@ -36,7 +37,7 @@ EMMM项目（利用大模型增强多模态命名实体识别）专注于通过�
     - 整理不同领域的多种数据集
     - 完成数据预处理，包括数据清洗、数据增强
 - 构建图片描述生成数据集
-    - 使用统一的，效果好的模型，方便之后对不同LLM模型的效果进行对比。中英文数据集，可能会分别使用[BLIP-2](https://github.com/huggingface/blog/blob/main/blip-2.md), [Chinese-CLIP](https://github.com/OFA-Sys/Chinese-CLIP)
+    - 使用统一的，效果好的模型，方便之后对不同LLM模型的效果进行对比。可能会使用[BLIP-2](https://github.com/huggingface/blog/blob/main/blip-2.md)
 - 外部知识库构建
     - 构建外部知识库，包括实体、关系、事件等信息
 
@@ -58,6 +59,15 @@ EMMM项目（利用大模型增强多模态命名实体识别）专注于通过�
 
 ## 🔌快速体验
 - 请阅读[快速体验](docs/quick_start.md)查阅
+
+## 🌝得分
+- 由该论文提供的[基准结果](https://github.com/zjukg/KG-MM-Survey?tab=readme-ov-file#multi-modal-named-entity-recognition)
+<details>
+    <summary>👈 🔎 Benchmarks </summary>
+<div align="center">
+    <img src="figures/mnertab.png" width="45%" height="auto" />
+</div>
+</details>
 
 
 ## 🎛项目结构
