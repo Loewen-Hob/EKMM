@@ -63,7 +63,7 @@ EMMM项目（利用大模型增强多模态命名实体识别）专注于通过�
 ## 🌝得分
 - 由该论文提供的[基准结果](https://github.com/zjukg/KG-MM-Survey?tab=readme-ov-file#multi-modal-named-entity-recognition)
 <details>
-    <summary>👈 🔎 Benchmarks </summary>
+    <summary>🔎 Benchmarks </summary>
 <div align="center">
     <img src="figures/mnertab.png" width="45%" height="auto" />
 </div>
@@ -114,3 +114,28 @@ python==3.7.10
 - 在此我们使用OCR文本检测与识别模型得到图片中更多的信息，包括文字、位置等信息。
 - 在此使用通用领域中英都可以识别的的[读光-文字识别-行识别模型](https://www.modelscope.cn/models/iic/cv_convnextTiny_ocr-recognition-general_damo/summary)与[读光-文字检测-行检测模型](https://www.modelscope.cn/models/iic/cv_resnet18_ocr-detection-db-line-level_damo/summary)，具体请阅读[OCR部分](https://modelscope.cn/headlines/article/42)查阅。
 - 代码实现于`/code/ocr_module.py`
+
+### Image Caption part
+- 在此我们使用[BLIP-2](https://github.com/huggingface/blog/blob/main/blip-2.md)模型生成图片描述。
+- 代码实现于`/code/image_caption.py`
+
+### Generate ft data
+- 基于CMNER数据集和twitter数据集生成用于LLM微调的json数据集。
+json格式为：
+```
+{
+    "messages": [
+        {
+            "role": "user",
+            "content": "请分析这段文本和对应的图片描述并完成实体识别的任务。这是对应图片的描述：‘一个男人坐在桌子前，拿着香奈儿的香水瓶’。
+            这是需要识别的语句：‘香奈儿也玩虚假宣传’。这是需要检测出来的实体类型：时间，地点，涉及金额，监管机构，产品名称，产品类别，产品品牌。
+            "
+        },
+        {
+            "role": "assistant",
+            "content": "['产品品牌': '香奈儿']"
+        }
+    ]
+},
+```
+- 代码实现于`/code/generate_ft_data.py`
